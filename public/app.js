@@ -34,3 +34,35 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
+// ______________________________________________
+// Generics
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docne = addUID({ name: 'ram', age: 23 });
+console.log(docne.name);
+const d2 = {
+    uid: 1,
+    resoutcesName: 's',
+    data: { a: 'd', b: 'ds' }
+};
+const d3 = {
+    uid: 1,
+    resoutcesName: 's',
+    data: 'd'
+};
+// ENUMS
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["Book"] = 0] = "Book";
+    ResourceType[ResourceType["Author"] = 1] = "Author";
+    ResourceType[ResourceType["Film"] = 2] = "Film";
+    ResourceType[ResourceType["director"] = 3] = "director";
+    ResourceType[ResourceType["Preson"] = 4] = "Preson";
+})(ResourceType || (ResourceType = {}));
+const d4 = {
+    uid: ResourceType.Film,
+    resoutcesName: 's',
+    data: 'd'
+};

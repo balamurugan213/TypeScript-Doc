@@ -64,3 +64,53 @@ form.addEventListener('submit',(e:Event)=>{
         amount.valueAsNumber
     )
 })
+
+// ______________________________________________
+
+// Generics
+
+const addUID =<T extends object>(obj:T)=>{
+    let uid =Math.floor(Math.random()*100);
+    return {...obj,uid};
+
+}
+
+let docne=addUID({name:'ram',age:23});
+
+console.log(docne.name);
+
+interface Resource<T>{
+    uid:number;
+    resoutcesName:string;
+    data:T;
+}
+
+const d2:Resource<object>={
+    uid:1,
+    resoutcesName:'s',
+    data:{a:'d',b:'ds'}
+}
+
+const d3:Resource<string>={
+    uid:1,
+    resoutcesName:'s',
+    data:'d'
+}
+
+// ENUMS
+
+enum ResourceType {Book,Author,Film,director,Preson}
+
+const d4:Resource<string>={
+    uid:ResourceType.Film,
+    resoutcesName:'s',
+    data:'d'
+}
+
+// Tuple
+
+let arr=['aaa',2,true]
+arr[2]='sss';
+
+// tuple is setting the data type
+let tup:[string,number,boolean]

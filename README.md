@@ -32,3 +32,5 @@ Learning and implementing typescript
     ```cmd
     tsc --init 
     ```
+
+# Concepts in type-Script
