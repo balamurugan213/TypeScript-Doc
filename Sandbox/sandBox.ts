@@ -50,6 +50,8 @@ let employee:{
     age:number,
     email:string
 }
+
+
 //3
 // Dynamic)(any) type
 let a:any =5;
@@ -67,4 +69,41 @@ let emp:{
     name:any,
     age:any,
     email:any
+}
+
+// declearing a type: function 
+let greet:Function;
+
+greet = () =>{
+    console.log("hello");
+}
+
+// no return type
+const sub =(a:number,b:number,c:number|string=10):void=>{
+    console.log(a,b);
+   
+}
+
+// specifying the return type
+const add =(a:number,b:number,c:number|string=10):number=>{
+    console.log(a,b);
+    return a+b;
+}
+add(5,10);
+
+// Type Aliases
+type StrNum=string|number;
+type obj={name:string, uid:StrNum}
+
+const emp1=(employee:obj)=>{
+    console.log(employee.name,employee.uid,)
+}
+
+
+// function signature(decleration)
+let greets:(a:string,b:string)=> void;
+let calc:(a:string,b:string,n:number )=> number;
+
+greets=(name:string,greetsing:string)=>{
+    console.log(`welcome ${name} to ${greetsing}`)
 }
