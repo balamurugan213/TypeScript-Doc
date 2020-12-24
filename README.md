@@ -33,4 +33,96 @@ Learning and implementing typescript
     tsc --init 
     ```
 
-# Concepts in type-Script
+- ## Concepts in type-Script
+
+  - DOM features
+
+  - Classes
+
+  - Visibility
+
+  - Modules
+
+  - Interface
+
+---
+
+## DOM features
+
+We can assign a type for dom elements so that ve can use the intelligence.
+
+```javascript
+const form=document.querySelector('.new-item-form') as  HTMLFontElement;
+```
+
+## Classes
+
+It is similar to the classes in java and other programmming language containing data members and functions.
+
+```javascript
+class Invoice{
+    
+    constructor(
+        client:string,
+        details:string,
+        amount:number)
+        {}
+
+    format(){
+        return `${this.client} owns Rs.${this.amount} for ${this.details}`;
+    }
+}
+
+docone=new Invoice('sam','money for book ',3);
+
+```
+
+## Visibility
+
+- private
+- public
+- readonly
+
+```javascript
+class Invoice{
+    
+    constructor(
+        readonly client:string,
+        private details:string,
+        public amount:number)
+        {}
+
+    format(){
+        return `${this.client} owns Rs.${this.amount} for ${this.details}`;
+    }
+}
+
+docone=new Invoice('sam','money for book ',3);
+
+```
+
+## Interface
+
+It is a important concept as it add structur to the program or class or anything.
+
+```javascript
+interface IsPerson{
+    name:string;
+    age:number;
+    speak(a:string):void;
+    spend(a:number):number;
+}
+
+const me:IsPerson={
+    name:'bala',
+    age:20,
+    speak(lang:string):void{
+        console.log(lang);
+    },
+    spend(amount:number):number{
+        console.log(amount);
+        return amount;
+    }
+}
+
+```

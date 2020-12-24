@@ -66,3 +66,8 @@ const d4 = {
     resoutcesName: 's',
     data: 'd'
 };
+// Tuple
+let arr = ['aaa', 2, true];
+arr[2] = 'sss';
+// tuple is setting the data type
+let tup;
