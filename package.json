@@ -1,0 +1,25 @@
+{
+  "name": "typescript-doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balamurugan213/TypeScript-Doc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balamurugan213/TypeScript-Doc/issues"
+  },
+  "homepage": "https://github.com/balamurugan213/TypeScript-Doc#readme",
+  "devDependencies": {
+    "ts-loader": "^8.0.13",
+    "typescript": "^4.1.3",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
